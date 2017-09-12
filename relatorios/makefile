@@ -1,7 +1,8 @@
 default: compile clean
 
 compile:
-	pdflatex prerel1.tex
+	pdflatex prerel$(R).tex
+	mv prerel$(R).pdf 130070629.pdf
 
 clean:
 	rm *.aux
