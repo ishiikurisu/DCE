@@ -1,4 +1,4 @@
-default: compile clean
+default: compile
 
 compile:
 	pdflatex prerel$(R).tex

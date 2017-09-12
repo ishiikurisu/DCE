@@ -23,11 +23,10 @@ Neste pré-relatório, consideraremos um amplificador operacional (\textit{amp o
 \end{figure}
 
 Consideramos, neste modelo, que
-$$ V_{out} = A (V_+ - V_-) $$
-e que tanto
+$$ V_{out}(s) = \frac{A_0}{1 + s \omega_b} (V_+(s) - V_-(s)) $$
+e que
 $$ R = \infty $$
-como
-$$ A = \infty $$
+para ganhos DC, $A_0=\infty$
 
 \section{Exercício 1}
 
@@ -38,14 +37,34 @@ Tomando como base a família de \textit{amp ops TL074} da \textit{Texas Instrume
     \item \textit{Slew rate}: $13 V/\mu s$ típico a $25^oC$. \textit{Amp op} montado com alimentação $30V_{pp}$.
 \end{itemize}
 
-% TODO Do remaining exercises
+\section{Exercício 2}
 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figs/rel2/ex2.png}
+    \caption{Circuito a ser analisado nos exercícios 2 a 4}
+\end{figure}
+
+Para obter a função de transferência do circuito descrito na figura 2, basta analisar a saída do amplificador operacional:
+$$ V_o = \frac{A_0}{1+s \omega_b}(V_i-V) $$
+Para descobrir $V$, vamos aplicar um divisor de tensão a partir de $V_o$:
+$$ V = V_o \frac{R_1}{R_1 + R_2} $$
+$$ \Rightarrow V_o = \frac{A_0}{1+s \omega_b} \left(V_i - V_o \frac{R_1}{R_1 + R_2} \right) $$
+Isolando $V_o/V_i$ para obter a função de transferência,
+$$ \Leftrightarrow \frac{V_o}{V_i} = \frac{A_o\cdotp(R_1 + R_2)}{s\cdotp\omega_b\cdotp(R_1+R_2)+R_1+R_2+A_oR_1} $$
+
+\section{Exercício 3}
+
+\section{Exercício 4}
+
+% IDEA Check this: https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.bode.html
 
 \section{Referência Bibliográfica}
 
 \begin{itemize}
     \item Apostila do professor Humberto. http://paginapessoal.utfpr.edu.br/humberto/atividade-de-ensino/inicio/labeltronica. Acesso em 14 de Agosto de 2017.
-    \item \textit{Datasheet} do $LM741$. http://www.ti.com/lit/ds/symlink/lm741.pdf. Acesso em 14 de Agosto de 2017.
+    \item \textit{Datasheet} da família $TL074$. http://www.ti.com/lit/gpn/TL074. Acesso em 12 de Setembro de 2017.
+    \item Notas de aula do professor Geovanny.
 \end{itemize}
 
 \end{document}
