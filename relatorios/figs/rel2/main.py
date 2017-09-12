@@ -12,8 +12,9 @@ if __name__ == '__main__':
     den = [w_b*(R_1+R_2), R_1+R_2+A_0*R_1]
     sys = scipy.signal.TransferFunction(num, den)
     w, mag, phase = scipy.signal.bode(sys)
-    matplotlib.pyplot.figure()
     matplotlib.pyplot.semilogx(w, mag)    # Bode magnitude plot
-    matplotlib.pyplot.figure()
+    matplotlib.pyplot.savefig('ex4-mag.png')
+    matplotlib.pyplot.clf()
     matplotlib.pyplot.semilogx(w, phase)  # Bode phase plot
-    matplotlib.pyplot.show()
+    matplotlib.pyplot.savefig('ex4-phase.png')
+    matplotlib.pyplot.clf()
