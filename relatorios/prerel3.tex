@@ -14,11 +14,64 @@
 \date{\today}
 \maketitle
 
+Neste relatório, vamos utilizar três modelos para o diodo. O primeiro deles é o modelo
+ideal, em que o diodo é um circuito fechado para quedas de tensão positivas e um
+circuito aberto para quedas de tensão negativas.
+
+% TODO Add image for diode model.
+
+O segundo modelo a ser utilizado é o modelo de queda de tensão constante, em que o
+diodo passa a ser um diodo ideal com uma fonte de tensão em série. Neste caso, o diodo
+somente conduz para tensões maiores do que a sua tensão de polarização.
+
+% TODO Add image for constant tension diode model.
+
+Neste modelo, podemos levar em conta o efeito Zener, em que, para alguns diodos, o diodo
+também conduz para quedas de tensão muito negativas. No caso, um diodo com
+características de Zener conduz também para tensões menores que a sua tensão de Zener.
+
+O terceiro modelo é o chamado diodo real, em que a corrente $i$ que passa pelo diodo
+depende da tensão $V$ aplicada sobre ele:
+$$i = I_s\left( e^{\frac{V}{nV_T}} - 1 \right)$$
+
 \section{Exercício 1}
+
+% TODO Add image describing circuit to be solved.
+
+Para resolver o exercício proposto, vamos utilizar o modelo do diodo ideal. Neste caso,
+a saida do circuito é trivial e é descrita na figura 4 para uma entrada unitária.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figs/rel3/ex1.png}
+    \caption{Saída do circuito do problema 1}
+\end{figure}
 
 \section{Exercício 2}
 
+Utilizando o modelo do diodo ideal, nota-se que
+\begin{equation}
+    v_o(t) =
+    \begin{cases}
+        v_i(t), & \text{se}\ v_i(t) > 0 \\
+        0, & \text{caso contrário}
+    \end{cases}
+\end{equation}
+
+Sendo assim, a característica de transferência do circuito será como o descrito na figura 5.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figs/rel3/ex2.png}
+    \caption{Característica de transferência do circuito dos problemas 1 e 2}
+\end{figure}
+
 \section{Exercício 3}
+
+Segundo fulano de tal, o modelo que é utilizado nesta disciplina para o diodo obedece a
+chamada equação de Shockley para o diodo:
+$$i = I_s\left( e^{\frac{V}{nV_T}} - 1 \right)$$
+onde ...
 
 \section{Exercício 4}
 
