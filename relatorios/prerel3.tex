@@ -18,13 +18,21 @@ Neste relatório, vamos utilizar três modelos para o diodo. O primeiro deles é
 ideal, em que o diodo é um circuito fechado para quedas de tensão positivas e um
 circuito aberto para quedas de tensão negativas.
 
-% TODO Add image for diode model.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.4\textwidth]{figs/diode.png}
+    \caption{Modelo ideal do diodo}
+\end{figure}
 
 O segundo modelo a ser utilizado é o modelo de queda de tensão constante, em que o
 diodo passa a ser um diodo ideal com uma fonte de tensão em série. Neste caso, o diodo
 somente conduz para tensões maiores do que a sua tensão de polarização.
 
-% TODO Add image for constant tension diode model.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.4\textwidth]{figs/diode2.png}
+    \caption{Modelo de tensão constante do diodo}
+\end{figure}
 
 Neste modelo, podemos levar em conta o efeito Zener, em que, para alguns diodos, o diodo
 também conduz para quedas de tensão muito negativas. No caso, um diodo com
@@ -36,7 +44,11 @@ $$i = I_s\left( e^{\frac{V}{nV_T}} - 1 \right)$$
 
 \section{Exercício 1}
 
-% TODO Add image describing circuit to be solved.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.4\textwidth]{figs/rel3/ex1.png}
+    \caption{Circuito para os problemas 1 e 2}
+\end{figure}
 
 Para resolver o exercício proposto, vamos utilizar o modelo do diodo ideal. Neste caso,
 a saida do circuito é trivial e é descrita na figura 4 para uma entrada unitária.
@@ -85,7 +97,11 @@ do \textit{1N4007} é $V_F = 1.1V$ para correntes iguais a $1A$.
 
 \section{Exercício 5}
 
-% TODO Add diagram for circuit 2.a
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figs/rel3/c2.png}
+    \caption{Circuito do problema 5}
+\end{figure}
 
 Utilizando o modelo de queda de tensão constante, é fácil ver que a característica
 de transferência do circuito será
@@ -97,7 +113,8 @@ de transferência do circuito será
     \end{cases}
 \end{equation}
 
-Neste caso,
+Neste caso, a saída está descrita na figura 7.
+
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{figs/rel3/ex5.png}
@@ -106,10 +123,20 @@ Neste caso,
 
 \section{Exercício 6}
 
-Para analisar o circuito, vamos analisar inicialmente o semiciclo positivo e depois
-o negativo. Para o positivo, o circuito equivalente é o da figura X.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figs/rel3/c3.png}
+    \caption{Circuito do problema 6}
+\end{figure}
 
-% TODO Add image for the direct wave circuit
+Para analisar o circuito, vamos analisar inicialmente o semiciclo positivo e depois
+o negativo. Para o positivo, o circuito equivalente é o da figura 9.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figs/rel3/c6-1.png}
+    \caption{Circuito com polarização direta}
+\end{figure}
 
 Neste caso,
 \begin{equation}
@@ -120,9 +147,13 @@ Neste caso,
     \end{cases}
 \end{equation}
 
-Para a onda reversa, analisaremos o circuito da figura Y, onde:
+Para a onda reversa, analisaremos o circuito da figura 10, onde:
 
-% TODO Add image for the inverted wave circuit
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figs/rel3/c6-2.png}
+    \caption{Circuito com polarização reversa}
+\end{figure}
 
 \begin{equation}
     v_s(t) =
