@@ -58,7 +58,8 @@ Utilizando o modelo do diodo ideal, nota-se que
     \end{cases}
 \end{equation}
 
-Sendo assim, a característica de transferência do circuito será como o descrito na figura 5.
+Sendo assim, a característica de transferência do circuito será como o descrito na
+figura 5.
 
 \begin{figure}
     \centering
@@ -68,16 +69,78 @@ Sendo assim, a característica de transferência do circuito será como o descri
 
 \section{Exercício 3}
 
-Segundo fulano de tal, o modelo que é utilizado nesta disciplina para o diodo obedece a
+Segundo Schroen, o modelo que é utilizado nesta disciplina para o diodo obedece a
 chamada equação de Shockley para o diodo:
 $$i = I_s\left( e^{\frac{V}{nV_T}} - 1 \right)$$
-onde ...
+onde $I_s$ é a corrente de saturação;
+$V_D$, a tensão sobre o diodo;
+$V_T$, a tensãotérmica; e
+$n$, o fator de idealidade do diodo (geralmente igual a 1 ou 2 para diodos
+de silício).
 
 \section{Exercício 4}
 
+Pelo \textit{datasheet} da \textit{Fairchild Instruments}, a tensão de polarização
+do \textit{1N4007} é $V_F = 1.1V$ para correntes iguais a $1A$.
+
 \section{Exercício 5}
 
+% TODO Add diagram for circuit 2.a
+
+Utilizando o modelo de queda de tensão constante, é fácil ver que a característica
+de transferência do circuito será
+\begin{equation}
+    v_s(t) =
+    \begin{cases}
+        V - V_F & \forall V \geq V_F \\
+        0, & \text{caso contrário}
+    \end{cases}
+\end{equation}
+
+Neste caso,
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figs/rel3/ex5.png}
+    \caption{Curva da característica de transferência do sistema do problema 5}
+\end{figure}
+
 \section{Exercício 6}
+
+Para analisar o circuito, vamos analisar inicialmente o semiciclo positivo e depois
+o negativo. Para o positivo, o circuito equivalente é o da figura X.
+
+% TODO Add image for the direct wave circuit
+
+Neste caso,
+$$ e_1 =  $$
+\begin{equation}
+    v_s(t) =
+    \begin{cases}
+        V_F & \forall V \geq V_F \\
+        0, & \text{caso contrário}
+    \end{cases}
+\end{equation}
+
+Para a onda reversa, analisaremos o circuito da figura Y, onde:
+
+% TODO Add image for the inverted wave circuit
+
+$$ e_1 =  $$
+\begin{equation}
+    v_s(t) =
+    \begin{cases}
+        V_F & \forall V \leq -V_F \\
+        0, & \text{caso contrário}
+    \end{cases}
+\end{equation}
+
+Sendo assim, a curva da característica de transferência pode ser traçada, como
+demonstrado na figura X.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figs/rel3/ex6.png}
+    \caption{Curva da característica de transferência do sistema do problema 6}
+\end{figure}
 
 \section{Exercício 7}
 
@@ -103,8 +166,10 @@ entre si.
 \section{Referência Bibliográfica}
 
 \begin{itemize}
-    \item Artigo sobre diodo do IEEE.
-    \item Datasheet do 1NXYZ.
+    \item SCHROEN, Walter H. "Characteristics of High-Current, High-Voltage Shockley
+    Diode." IEEE Transactions on Electron Devices, Vol. ED-17, No. 9. September 1970.
+    \item Datasheet do 1N4007 da Fairchild Instruments. Acesso em 18 de Setembro de
+    2017.
     \item Notas de aula do professor Geovanny.
 \end{itemize}
 
