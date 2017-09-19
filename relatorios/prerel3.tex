@@ -6,6 +6,7 @@
 \usepackage{graphicx}
 \usepackage{commath}
 \usepackage[portuguese]{babel}
+\usepackage{float}
 
 \begin{document}
 
@@ -18,7 +19,7 @@ Neste relatório, vamos utilizar três modelos para o diodo. O primeiro deles é
 ideal, em que o diodo é um circuito fechado para quedas de tensão positivas e um
 circuito aberto para quedas de tensão negativas.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.4\textwidth]{figs/diode.png}
     \caption{Modelo ideal do diodo}
@@ -28,7 +29,7 @@ O segundo modelo a ser utilizado é o modelo de queda de tensão constante, em q
 diodo passa a ser um diodo ideal com uma fonte de tensão em série. Neste caso, o diodo
 somente conduz para tensões maiores do que a sua tensão de polarização.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.4\textwidth]{figs/diode2.png}
     \caption{Modelo de tensão constante do diodo}
@@ -44,16 +45,16 @@ $$i = I_s\left( e^{\frac{V}{nV_T}} - 1 \right)$$
 
 \section{Exercício 1}
 
-\begin{figure}
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.4\textwidth]{figs/rel3/ex1.png}
+    \includegraphics[width=0.4\textwidth]{figs/rel3/c1.png}
     \caption{Circuito para os problemas 1 e 2}
 \end{figure}
 
 Para resolver o exercício proposto, vamos utilizar o modelo do diodo ideal. Neste caso,
 a saida do circuito é trivial e é descrita na figura 4 para uma entrada unitária.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{figs/rel3/ex1.png}
     \caption{Saída do circuito do problema 1}
@@ -73,7 +74,7 @@ Utilizando o modelo do diodo ideal, nota-se que
 Sendo assim, a característica de transferência do circuito será como o descrito na
 figura 5.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{figs/rel3/ex2.png}
     \caption{Característica de transferência do circuito dos problemas 1 e 2}
@@ -97,9 +98,9 @@ do \textit{1N4007} é $V_F = 1.1V$ para correntes iguais a $1A$.
 
 \section{Exercício 5}
 
-\begin{figure}
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{figs/rel3/c2.png}
+    \includegraphics[width=0.4\textwidth]{figs/rel3/c2.png}
     \caption{Circuito do problema 5}
 \end{figure}
 
@@ -115,7 +116,7 @@ de transferência do circuito será
 
 Neste caso, a saída está descrita na figura 7.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{figs/rel3/ex5.png}
     \caption{Curva da característica de transferência do sistema do problema 5}
@@ -123,18 +124,18 @@ Neste caso, a saída está descrita na figura 7.
 
 \section{Exercício 6}
 
-\begin{figure}
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{figs/rel3/c3.png}
+    \includegraphics[width=0.4\textwidth]{figs/rel3/c3.png}
     \caption{Circuito do problema 6}
 \end{figure}
 
 Para analisar o circuito, vamos analisar inicialmente o semiciclo positivo e depois
 o negativo. Para o positivo, o circuito equivalente é o da figura 9.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{figs/rel3/c6-1.png}
+    \includegraphics[width=0.4\textwidth]{figs/rel3/c6-1.png}
     \caption{Circuito com polarização direta}
 \end{figure}
 
@@ -149,9 +150,9 @@ Neste caso,
 
 Para a onda reversa, analisaremos o circuito da figura 10, onde:
 
-\begin{figure}
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{figs/rel3/c6-2.png}
+    \includegraphics[width=0.4\textwidth]{figs/rel3/c6-2.png}
     \caption{Circuito com polarização reversa}
 \end{figure}
 
@@ -164,8 +165,8 @@ Para a onda reversa, analisaremos o circuito da figura 10, onde:
 \end{equation}
 
 Sendo assim, a curva da característica de transferência pode ser traçada, como
-demonstrado na figura X.
-\begin{figure}
+demonstrado na figura 11.
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{figs/rel3/ex6.png}
     \caption{Curva da característica de transferência do sistema do problema 6}
@@ -173,10 +174,20 @@ demonstrado na figura X.
 
 \section{Exercício 7}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{figs/rel3/c4.png}
+    \caption{Circuito do problema 7}
+\end{figure}
+
 Utilizando o modelo de queda de tensão constante aplicado ao diodo Zener e
 analisando de forma análoga ao circuito do problema 6,
 
-% TODO Add image for the direct wave circuit.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{figs/rel3/c4-1.png}
+    \caption{Circuito com polarização direta}
+\end{figure}
 
 \begin{equation}
     v_s(t) =
@@ -186,7 +197,11 @@ analisando de forma análoga ao circuito do problema 6,
     \end{cases}
 \end{equation}
 
-% TODO Add image for the inverse wave circuit.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{figs/rel3/c4-2.png}
+    \caption{Circuito com polarização reversa}
+\end{figure}
 
 \begin{equation}
     v_s(t) =
@@ -197,8 +212,8 @@ analisando de forma análoga ao circuito do problema 6,
 \end{equation}
 
 Sendo assim, a curva da característica de transferência do circuito pode ser desenhada
-e encontra-se na figura Z.
-\begin{figure}
+e encontra-se na figura 15.
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{figs/rel3/ex7.png}
     \caption{Curva da característica de transferência do sistema do problema 7}
@@ -207,9 +222,9 @@ e encontra-se na figura Z.
 \section{Exercício 8}
 
 Por analogia ao problema 6, a curva de saída deste problema pode ser obtida
-intuitivamente e é visível na figura W.
+intuitivamente e é visível na figura 16.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{figs/rel3/ex8.png}
     \caption{Curva da característica de transferência do sistema do problema 8}
