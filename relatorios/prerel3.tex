@@ -92,7 +92,7 @@ de transferência do circuito será
 \begin{equation}
     v_s(t) =
     \begin{cases}
-        V - V_F & \forall V \geq V_F \\
+        V - V_F & \forall\ V \geq V_F \\
         0, & \text{caso contrário}
     \end{cases}
 \end{equation}
@@ -112,11 +112,10 @@ o negativo. Para o positivo, o circuito equivalente é o da figura X.
 % TODO Add image for the direct wave circuit
 
 Neste caso,
-$$ e_1 =  $$
 \begin{equation}
     v_s(t) =
     \begin{cases}
-        V_F & \forall V \geq V_F \\
+        V_F & \forall\ V \geq V_F \\
         0, & \text{caso contrário}
     \end{cases}
 \end{equation}
@@ -125,11 +124,10 @@ Para a onda reversa, analisaremos o circuito da figura Y, onde:
 
 % TODO Add image for the inverted wave circuit
 
-$$ e_1 =  $$
 \begin{equation}
     v_s(t) =
     \begin{cases}
-        V_F & \forall V \leq -V_F \\
+        V_F & \forall\ V \leq -V_F \\
         0, & \text{caso contrário}
     \end{cases}
 \end{equation}
@@ -144,7 +142,47 @@ demonstrado na figura X.
 
 \section{Exercício 7}
 
+Utilizando o modelo de queda de tensão constante aplicado ao diodo Zener e
+analisando de forma análoga ao circuito do problema 6,
+
+% TODO Add image for the direct wave circuit.
+
+\begin{equation}
+    v_s(t) =
+    \begin{cases}
+        V_Z & \forall\ V > V_Z \\
+        0, & \text{caso contrário}
+    \end{cases}
+\end{equation}
+
+% TODO Add image for the inverse wave circuit.
+
+\begin{equation}
+    v_s(t) =
+    \begin{cases}
+        -V_D & \forall\ V < V_D \\
+        0, & \text{caso contrário}
+    \end{cases}
+\end{equation}
+
+Sendo assim, a curva da característica de transferência do circuito pode ser desenhada
+e encontra-se na figura Z.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figs/rel3/ex7.png}
+    \caption{Curva da característica de transferência do sistema do problema 7}
+\end{figure}
+
 \section{Exercício 8}
+
+Por analogia ao problema 6, a curva de saída deste problema pode ser obtida
+intuitivamente e é visível na figura W.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figs/rel3/ex8.png}
+    \caption{Curva da característica de transferência do sistema do problema 8}
+\end{figure}
 
 \section{Exercício 9}
 

@@ -37,6 +37,39 @@ def ex6():
     return apply(numpy.linspace(-5, 5, 100),
                  lambda t: map(lambda y: f(y), t))
 
+def ex7():
+    def f(t):
+        if t > 2.4:
+            return 2.4
+        elif t < -1:
+            return -1
+        else:
+            return 0
+    return apply(numpy.linspace(-5, 5, 100),
+                 lambda t: map(lambda y: f(y), t))
+
+def ex7():
+    def f(t):
+        if t > 2.4:
+            return 2.4
+        elif t < -1:
+            return -1
+        else:
+            return 0
+    return apply(numpy.linspace(-5, 5, 100),
+                 lambda t: map(lambda y: f(y), t))
+
+def ex8():
+    def f(t):
+        if t > 2.4:
+            return 2.4
+        elif t < -2.4:
+            return -2.4
+        else:
+            return 0
+    return apply(numpy.linspace(-5, 5, 100),
+                 lambda t: map(lambda y: f(y), t))
+
 if __name__ == '__main__':
     t, v_o = ex1()
     plot(t, v_o, 'Tempo', 'Tensão', 'ex1.png')
@@ -46,3 +79,7 @@ if __name__ == '__main__':
     plot(v, v_s, 'V', 'Vs', 'ex5.png')
     v, v_s = ex6()
     plot(v, v_s, 'V', 'Vs', 'ex6.png')
+    v, v_s = ex7()
+    plot(v, v_s, 'V', 'Vs', 'ex7.png')
+    v, v_s = ex8()
+    plot(v, v_s, 'V', 'Vs', 'ex8.png')
