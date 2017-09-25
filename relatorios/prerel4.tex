@@ -1,0 +1,113 @@
+\documentclass[12pt, a4paper, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[cm]{fullpage}
+\usepackage{fancyhdr}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{commath}
+\usepackage[portuguese]{babel}
+\usepackage{float}
+\usepackage{hyperref}
+
+\begin{document}
+
+\title{Pré-relatório 4 do Laboratório de Dispositivos e Circuitos Eletrônicos}
+\author{Cristiano Silva Júnior: 13/0070629}
+\date{\today}
+\maketitle
+
+Neste relatório, vamos utilizar três modelos para o diodo. O primeiro deles é o modelo ideal, em que o diodo é um circuito fechado para quedas de tensão positivas e um circuito aberto para quedas de tensão negativas.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{figs/diode.png}
+    \caption{Modelo ideal do diodo}
+\end{figure}
+
+O segundo modelo a ser utilizado é o modelo de queda de tensão constante, em que o diodo passa a ser um diodo ideal com uma fonte de tensão em série. Neste caso, o diodo somente conduz para tensões maiores do que a sua tensão de polarização.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{figs/diode2.png}
+    \caption{Modelo de tensão constante do diodo}
+\end{figure}
+
+Neste modelo, podemos levar em conta o efeito Zener, em que, para alguns diodos, o diodo também conduz para quedas de tensão muito negativas. No caso, um diodo com características de Zener conduz também para tensões menores que a sua tensão de Zener.
+
+O terceiro modelo é o chamado diodo real, em que a corrente $i$ que passa pelo diodo depende da tensão $V$ aplicada sobre ele:
+$$i = I_s\left( e^{\frac{V}{nV_T}} - 1 \right)$$
+
+\section{Exercício 1}
+
+% TODO Circuito do exercício 1 com modelo atualizado
+
+Utilizando o modelo de tensão constante do diodo para resolver o circuito proposto, podemos atualizar o diagrama, como desenhado na figura 3. Neste caso, é possível que a saída, em regime permanente, será uma tensão DC $v_o = V_p - V_D$, onde $V_D$ é a queda de tensão do diodo.
+
+\section{Exercício 2}
+
+% TODO Adicionar circuito do exercício 2 tanto com condução (a) como sem condução (b) do diodo.
+
+Analisando a corrente $i_L$ da carga no circuito em questão, nota-se que a saída terá uma forma de onda similar a saída, mas com valor máximo $i_{Lmax} = \frac{V_P}{R_L}$. Isto é, ela acompanhará a senoide da entrada quando crescer mas, quando a entrada começar a decair, devido ao capacitor, a tensão no resistor decairá vagarosamente, não chegando a se anular até encontrar uma tensão de crescimento da entrada novamente. Desta forma, a saída é similar a uma tensão DC, com algumas variações.
+
+\section{Exercício 3}
+
+Neste laboratório, utilizaremos o diodo $1N4739$, que é caracterizado por ser um diodo Zener para aplicações de potência. Analisando o \textit{datasheet} do componente fornecido pela \textit{Fairchild Semiconductors}, podemos estudar alguns de seus valores nominais:
+
+\begin{itemize}
+    \item Tensão de Zener $V_Z = 9,1V$ a $I_Z = 28ma$;
+    \item Máxima impedância $Z_Z = 5 \Omega$;
+\end{itemize}
+
+\section{Exercício 4}
+
+% TODO Obter livro da disciplina
+
+\section{Exercício 5}
+
+Para uma aplicação real, o circuito proposto no exercício, que pode ser visto na figura 6 deste relatório, não pode ser utilizado como uma fonte de tensão DC, já que há uma variação muito grande em sua saída para ser considerado uma fonte DC.
+
+Além disso, por questões de segurança, espera-se que a impedância nas saídas de um componente como este seja nula, e logo se nota que a impedância é, considerando o transformador como ideal, $Z = \frac{1}{\jmath C \omega}$, onde $\omega = 120 \pi$ radianos, para o sistema energético brasileiro.
+
+\section{Exercício 6}
+
+Assumindo o transformador utilizado no problema como ideal, espera=se que a sua frequência de saída seja igual à frequência da linha. Neste caso, como a energia elétrica no Brasil é transmitida a $60Hz$, então a frequência de excitação do circuito é de $60Hz$.
+
+\section{Exercício 7}
+
+O valor RMS de uma medida $V$ é definida como
+$$ V_{RMS} = \left( \frac{1}{T} \int_0^T V(t)^2 \mathrm{d}t \right)^{\frac{1}{2}} $$
+onde $T$ é o período da onda que descreve $V$. No nosso caso,
+$$ V(t) = A \sin(2 \pi f t) $$
+pois esperamos este formato na energia fornecida pelo sistema energético brasileiro. Substituindo $V$ na definição do valor RMS, notamos que
+$$ V_{RMS} = \frac{A}{\sqrt{2}} $$
+Como no problema $V_{RMS} = 12V$, então o valor de pico da tensão será
+$$ A = \sqrt{2} \cdot V_{RMS} = 16.97V $$
+
+\section{Exercício 8}
+
+A tensão de ondulação (ou de \textit{ripple}) é...
+
+\section{Exercício 9}
+
+$$v_r = IDK$$
+
+\section{Exercício 10}
+
+Pela lei de Ohm, a tensão sobre um componente resistor é $V=RI$. Logo, se espera que, quanto menor a resistência, menor a tensão sobre ele.
+
+\section{Exercício 11}
+
+Eu não sei porque tem um diodo Zener lá.
+
+\section{Exercício 12}
+
+Um circuito regulador tem como premissa a regulação da tensão sobre ele para que ela se mantenha constante. Em geral, ele construído com um circuito retificador seguido de alguns filtros à escolha do fabricante, já que o retificador não tem uma saída constante, como comentado no exercício 5 deste pré-relatório.
+
+\section{Referência Bibliográfica}
+
+\begin{itemize}
+    \item ???. 1N4739A: Zener 9.1V 1W 5\%. Disponível em \url{http://www.onsemi.com/PowerSolutions/product.do?id=1N4739A}. Acesso em 25 de Setembro de 2017.
+    \item Notas de aula do professor Geovanny.
+\end{itemize}
+
+\end{document}
