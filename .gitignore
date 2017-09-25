@@ -1,3 +1,5 @@
 *.aux
 *.log
 *Thumbs.db
+*.out
+*.bat
