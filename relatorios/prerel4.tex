@@ -39,13 +39,21 @@ $$i = I_s\left( e^{\frac{V}{nV_T}} - 1 \right)$$
 
 \section{Exercício 1}
 
-% TODO Circuito do exercício 1 com modelo atualizado
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{figs/rel4/ex1.png}
+    \caption{Diagrama com modelo de tensão constante no diodo para condução direta.}
+\end{figure}
 
 Utilizando o modelo de tensão constante do diodo para resolver o circuito proposto, podemos atualizar o diagrama, como desenhado na figura 3. Neste caso, é possível que a saída, em regime permanente, será uma tensão DC $v_o = V_p - V_D$, onde $V_D$ é a queda de tensão do diodo.
 
 \section{Exercício 2}
 
-% TODO Adicionar circuito do exercício 2 tanto com condução (a) como sem condução (b) do diodo.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figs/rel4/ex2.png}
+    \caption{(a) Circuito com diodo em modo de condução. (b) Circuito com diodo em polarização reversa. Neste caso, o diodo é tratado como um circuito aberto, restando somente o circuito RC.}
+\end{figure}
 
 Analisando a corrente $i_L$ da carga no circuito em questão, nota-se que a saída terá uma forma de onda similar a saída, mas com valor máximo $i_{Lmax} = \frac{V_P}{R_L}$. Isto é, ela acompanhará a senoide da entrada quando crescer mas, quando a entrada começar a decair, devido ao capacitor, a tensão no resistor decairá vagarosamente, não chegando a se anular até encontrar uma tensão de crescimento da entrada novamente. Desta forma, a saída é similar a uma tensão DC, com algumas variações.
 
@@ -65,7 +73,11 @@ Resolvendo o problema utilizando o procedimento de Sedra et al. (2014), primeiro
 Assumimos que a tensão $V_Z$ sobre o diodo é dada pela tensão sobre a impedância de Zener somada à tensão de Zener $V_{Zo}$. Sendo assim,
 $$ V_Z = V_{Zo} + Z_Z \cdot I_Z \Leftrightarrow V_{Zo} = V_z - Z_Z \cdot I_Z $$
 
-% TODO Add image of circuit without load
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{figs/rel4/ex4-1.png}
+    \caption{Circuito somente com diodo montado}
+\end{figure}
 
 Montando o diodo no circuito, temos que a corrente agora será
 $$ I_Z = \frac{V-V_{Zo}}{R+Z_Z} $$
@@ -73,7 +85,11 @@ $$ \Rightarrow e_0 = V - I_Z \cdot R $$
 
 Agora sem o diodo no circuito, vamos encontrar um valor $R_L$ para o resistor de carga que garanta esta queda de tensão:
 
-% TODO Add image of circuit without diodes
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{figs/rel4/ex4-2.png}
+    \caption{Circuito somente com resistor de carga}
+\end{figure}
 
 Por divisor de tensão,
 $$ e_0 = V \cdot \frac{R_L}{R_L+R} $$
