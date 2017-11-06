@@ -1,5 +1,13 @@
-\documentclass{article}
+\documentclass[12pt, a4paper, twoside]{article}
 \usepackage[utf8]{inputenc}
+\usepackage[cm]{fullpage}
+\usepackage{fancyhdr}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{commath}
+\usepackage[portuguese]{babel}
+\usepackage{float}
+\usepackage{hyperref}
 
 \title{Pré-experimento 6 de LDCE}
 \author{Cris Joe Silva Jr.}
@@ -10,6 +18,15 @@
 \maketitle
 
 \section{Introdução}
+
+Neste relatório, utilizaremos o modelo descrito na figura 1 para o transistor NPN.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figs/bjt.png}
+    \caption{Modelo do transistor de junção bipolar do tipo NPNr.}
+\end{figure}
+
 
 \section{Questionamentos}
 
@@ -23,9 +40,26 @@ O transistor \textit{TIP31} é um transistor NPN, enquanto o transistor \textit{
 
 \subsection{Questão 3}
 
-% TODO Adicionar imagem do circuito em análise.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figs/rel6/circuit.png}
+    \caption{Circuito a ser analisado neste pré-relatório.}
+\end{figure}
 
-% TODO Adicionar imagem do circuito equivalente.
+Para descobrir o circuito equivalente AC do problema em questão, podemos:
+
+\begin{enumerate}
+    \item Remover as fontes DC do circuito;
+    \item Substituir o transistor pelo seu modelo.
+\end{enumerate}
+
+Se considerarmos que os capacitores $C_1$, $C_2$ e $C_3$ tiverem capacitâncias altas o suficiente em relação às frequências do circuito, podemos substituí-los por curtos. Neste caso, o circuito equivalente se torna o circuito da figura 3.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figs/rel6/ac_eq.png}
+    \caption{Circuito AC equivalente do circuito da figura 2.}
+\end{figure}
 
 \subsection{Questão 4}
 
