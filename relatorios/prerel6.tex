@@ -109,6 +109,39 @@ $$ e_1 = r_o \cdot \left( \frac{R_C || R_L}{r_o} + 1 + \beta \right) $$
 $$ \Rightarrow V_{Th} = r_\pi \cdot 1A + e_1 $$
 $$ \therefore R_i = r_\pi + R_C || R_L + r_o \cdot (1 + \beta) $$
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figs/rel6/ex4o.png}
+    \caption{Circuito com resistência equivalente de Thevenin $R_o$.}
+\end{figure}
+
+Para descobrir $R_o$, podemos aplicar a mesma metodologia que usamos para descobrir o $R_i$:
+
+\begin{equation}
+    \begin{cases}
+        1 = \frac{e_1 - 0}{R_c} + \frac{e_1 - e_2}{r_o} + \beta i_B \\
+        \beta i_B + \frac{e_1 - e_2}{r_o} = \frac{e_2 - e_3}{r_\pi} \\
+         \frac{e_2 - e_3}{r_\pi} - \frac{e_3 - 0}{R_S || R_B}
+    \end{cases}
+\end{equation}
+
+Da montagem do circuito,
+$$ i_B = -\frac{e_2 - e_3}{r_\pi} $$
+$$ V_{Th} = e_1 $$
+
+Reorganizando o sistema,
+
+\begin{equation}
+    \begin{cases}
+        \beta i_B + e_1 \left(\frac{1}{r_o} + \frac{1}{R_c}\right) - 1 - \frac{e_2}{o} = 0 \\
+        \beta ii_B - e_2 \left(\frac{1}{r_\pi} + \frac{1}{r_o}\right) - \frac{e_3}{\pi} + \frac{e_1}{r_o} = 0\\
+        - e_3 \left(\frac{1}{r_\pi} + \frac{1}{R_b}\right) + \frac{e_2}{r_\pi} = 0 \\
+        - i_B - \frac{e_@}{\pi} + \frac{e_3}{r_\pi} = 0
+    \end{cases}
+\end{equation}
+
+$$ \Rightarrow R_o = \frac{V_{Th}}{1A} = \frac{e_1}{1A} $$
+
 \subsection{Questão 5}
 
 Pela definição,

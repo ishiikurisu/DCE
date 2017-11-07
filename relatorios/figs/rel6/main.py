@@ -11,7 +11,10 @@ def actual_problem():
     eq2 = x*(1/o) - y*(1/o+1/pi) - z/pi + i*beta
     eq3 = y/pi - z*(1/pi+1/b)
     eq4 = -y/pi + z/pi - i
-    solution = sympy.solvers.solve([eq1, eq2, eq3, eq4], x, y, z, i)
+    eqs = [eq1, eq2, eq3, eq4]
+    for eq in eqs:
+        print(sympy.latex(eq))
+    solution = sympy.solvers.solve(eqs, x, y, z, i)
     print(solution[x])
 
 if __name__ == '__main__':
