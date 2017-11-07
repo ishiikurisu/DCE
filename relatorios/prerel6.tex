@@ -63,7 +63,32 @@ Se considerarmos que os capacitores $C_1$, $C_2$ e $C_3$ tiverem capacitâncias 
 
 \subsection{Questão 4}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figs/rel6/ex4.png}
+    \caption{Circuito a ser analisado neste pré-relatório.}
+\end{figure}
+
+Para descobrir $v_o$, podemos aplicar a lei de Kirchhoff das correntes no circuito e analisar sua montagem. Inicialmente vamos definir $ R_B := R_{b1} || R_{b2} $. Em seguida, vamos definir os nós $e_1$ e $e_2$. Aplicando a lei de Kirchhoff das correntes, temos,
+
+\begin{equation}
+    \begin{cases}
+        \frac{V_S-e_1}{R_S} = \frac{e_1 - 0}{R_B} + \frac{e_1-e_2}{r_\pi} \\
+        \frac{e_1-e_2}{r_\pi} + \beta i_B = \frac{e_2 - v_o}{r_o} \\
+        \beta i_B + \frac{v_o - 0}{R_C||R_L} = \frac{e_2 - v_o}{r_o}
+    \end{cases}
+\end{equation}
+
+Da montagem do circuito, temos que
+$$ e_2 = 0 $$
+$$ i_B = \frac{e_1 - e_2}{r_\pi} = \frac{e_1}{r_\pi} $$
+
+Resolvendo o sistema para $V_S$, $e_1$ e $v_o$, temos que
+$$ v_o(t) = -V_S(t) \cdot \frac{r_o}{r_\pi} \cdot (1+\beta) \cdot \frac{1}{R_S} \cdot \left(\frac{1}{R_S} + \frac{1}{R_B} + \frac{1}{r_\pi} \right)^{-1} $$
+
 \subsection{Questão 5}
+
+Descobrir o ganho $A_v$.
 
 \subsection{Questão 6}
 
