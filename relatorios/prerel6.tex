@@ -8,6 +8,8 @@
 \usepackage[portuguese]{babel}
 \usepackage{float}
 \usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
 
 \title{Pré-experimento 6 de LDCE}
 \author{Cris Joe Silva Jr.}
@@ -85,6 +87,27 @@ $$ i_B = \frac{e_1 - e_2}{r_\pi} = \frac{e_1}{r_\pi} $$
 
 Resolvendo o sistema para $V_S$, $e_1$ e $v_o$, temos que
 $$ v_o(t) = -V_S(t) \cdot \frac{r_o}{r_\pi} \cdot (1+\beta) \cdot \frac{1}{R_S} \cdot \left(\frac{1}{R_S} + \frac{1}{R_B} + \frac{1}{r_\pi} \right)^{-1} $$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figs/rel6/ex4i.png}
+    \caption{Circuito com resistência equivalente de Thevenin $R_i$.}
+\end{figure}
+
+Para descobrir $R_i$, vamos aplicar uma fonte de corrente de $1A$ na entrada do circuito e descobrir a tensão $V_{Th}$ vista pela fonte. Depois, basta aplicar a lei de Ohm para descobrir a resistência de Thevenin equivalente desejada. Aplicando a lei de Kirchhoff das correntes no circuito da figura 4, temos que:
+
+\begin{equation}
+    \begin{cases}
+        1 + \beta i_B + \frac{e_1 - e_2}{r_o} = 0 \\
+        \beta i_B + \frac{e_2 - 0}{R_C || R_L} + \frac{e_2 - e_1}{r_o} = 0
+    \end{cases}
+\end{equation}
+
+Resolvendo para $e_1$, nota-se que,
+
+$$ e_1 = r_o \cdot \left( \frac{R_C || R_L}{r_o} + 1 + \beta \right) $$
+$$ \Rightarrow V_{Th} = r_\pi \cdot 1A + e_1 $$
+$$ \therefore R_i = r_\pi + R_C || R_L + r_o \cdot (1 + \beta) $$
 
 \subsection{Questão 5}
 
