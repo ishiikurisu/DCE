@@ -9,7 +9,7 @@ def load(where):
     with open(where, 'r') as fp:
         for line in fp:
             if first_line:
-                fields = line.split('\t')
+                fields = list(map(lambda s: s.strip(), line.split('\t')))
                 for field in fields:
                     data[field] = []
                 first_line = False
@@ -20,17 +20,17 @@ def load(where):
 
     return data
 
-def draw(data, what, where):
+def draw(data, what):
     lines = []
     all_v_cc = data['v_cc']
     all_what = data[what]
-    i_c = data['i_c\n']
+    i_c = data['i_c']
     all_v = {}
     all_i = {}
     lines = []
 
     for i, v_cc in enumerate(all_v_cc):
-        if v_cc not in all_v:
+        if str(v_cc) not in all_v:
             all_v[str(v_cc)] = []
             all_i[str(v_cc)] = []
         all_v[str(v_cc)].append(all_what[i])
@@ -46,10 +46,10 @@ def draw(data, what, where):
     plt.legend(handles=lines)
     plt.xlabel('i_c (mA)')
     plt.ylabel('{0} (V)'.format(what))
-    plt.savefig(where)
+    plt.savefig('{0}.png'.format(what))
     plt.clf()
 
 if __name__ == '__main__':
     data = load('figs/rel5/dados.csv')
-    draw(data, 'v_be', 'v_be.png')
-    draw(data, 'v_ce', 'v_ce.png')
+    draw(data, 'v_be')
+    draw(data, 'v_ce')
